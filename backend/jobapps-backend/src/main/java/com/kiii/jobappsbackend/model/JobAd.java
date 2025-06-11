@@ -11,9 +11,7 @@ public class JobAd {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String position;
-
     @ManyToOne
     private Company company;
 
