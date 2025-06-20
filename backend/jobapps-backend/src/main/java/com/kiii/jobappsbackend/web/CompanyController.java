@@ -20,7 +20,7 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
-    @GetMapping("/get-all")
+    @GetMapping("/get")
     public List<Company> getAll() {
         return this.companyService.getAll();
     }
