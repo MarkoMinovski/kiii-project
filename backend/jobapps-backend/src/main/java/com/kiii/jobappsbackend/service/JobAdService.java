@@ -11,4 +11,5 @@ public interface JobAdService {
     public Optional<JobAd> create(String position, Long companyId);
     public Optional<JobAd> update(Long id, String position, Long companyId);
     public void delete(Long id);
+    public List<JobAd> getAllByCompany(Long companyId);
 }

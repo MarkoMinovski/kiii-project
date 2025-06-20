@@ -57,4 +57,15 @@ public class JobAdServiceImpl implements JobAdService {
         Optional<JobAd> jobAd = this.jobAdRepository.findById(id);
         jobAd.ifPresent(this.jobAdRepository::delete);
     }
+
+    @Override
+    public List<JobAd> getAllByCompany(Long companyId) {
+        Optional<Company> c = this.companyService.getById(companyId);
+
+        if (c.isPresent()) {
+            return this.jobAdRepository.findJobAdsByCompany(c.get());
+        }
+
+        return List.of();
+    }
 }
