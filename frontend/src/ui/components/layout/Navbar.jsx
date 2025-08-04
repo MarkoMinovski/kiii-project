@@ -15,8 +15,8 @@ const Navbar = () => {
                 <Toolbar>
 
 
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <ReactRouterLink to="/" style={{ textDecoration: 'none', color: "#FFFFFF" }}>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: "start"  }}>
+                        <ReactRouterLink to="/" style={{ textDecoration: 'none', color: "#FFFFFF"}}>
                             JobApps
                         </ReactRouterLink>
                     </Typography>

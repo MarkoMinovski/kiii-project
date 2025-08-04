@@ -1,9 +1,6 @@
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
-import Navbar from "../components/layout/Navbar.jsx";
 import Typography from "@mui/material/Typography";
-import HomePageCard from "../components/HomePageCard.jsx";
-import Grid from "@mui/material/Grid";
 
 const HomePage = () => {
     return (
