@@ -23,12 +23,12 @@ const Navbar = () => {
 
 
                     <Button>
-                        <ReactRouterLink to="/countries" style={{ textDecoration: 'none', color: "#FFFFFF" }}>
+                        <ReactRouterLink to="/companies" style={{ textDecoration: 'none', color: "#FFFFFF" }}>
                             Companies
                         </ReactRouterLink>
                     </Button>
                     <Button>
-                        <ReactRouterLink to="/authors" style={{ textDecoration: 'none', color: "#FFFFFF" }}>
+                        <ReactRouterLink to="/ads" style={{ textDecoration: 'none', color: "#FFFFFF" }}>
                             Job Ads
                         </ReactRouterLink>
                     </Button>

@@ -10,12 +10,10 @@ import org.springframework.stereotype.Component;
 public class DataInitializer {
     private final CompanyService companyService;
     private final JobAdService jobAdService;
-    private final JobAppService jobAppService;
 
-    public DataInitializer(CompanyService companyService, JobAdService jobAdService, JobAppService jobAppService) {
+    public DataInitializer(CompanyService companyService, JobAdService jobAdService) {
         this.companyService = companyService;
         this.jobAdService = jobAdService;
-        this.jobAppService = jobAppService;
     }
 
     @PostConstruct
