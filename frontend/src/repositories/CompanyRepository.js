@@ -7,7 +7,7 @@ const CompanyRepository =  {
     },
 
     find: async (id) => {
-        return await AxiosInstance.get(`/company/${id}`);
+        return await AxiosInstance.get(`/company/get/${id}`);
     }
 }
 

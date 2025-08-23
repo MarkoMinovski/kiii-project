@@ -3,14 +3,12 @@ package com.kiii.jobappsbackend.web;
 import com.kiii.jobappsbackend.model.JobAd;
 import com.kiii.jobappsbackend.service.JobAdService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/ads")
 public class JobAdController {
 
@@ -28,6 +26,11 @@ public class JobAdController {
     @GetMapping
     public List<JobAd> getAll() {
         return this.jobAdService.getAll();
+    }
+
+    @GetMapping("/by-company")
+    public List<JobAd> getAllByCompany(@RequestParam(required = true) Long companyId) {
+        return this.jobAdService.getAllByCompany(companyId);
     }
 
 

@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import {CircularProgress} from "@mui/material";
 import CompanyTable from "../companyComponents/CompanyTable.jsx";
+import Typography from "@mui/material/Typography";
 
 
 const CompanyPage = () => {
@@ -12,6 +13,7 @@ const CompanyPage = () => {
     return (
         <>
             <Box>
+                <Typography variant="h1" sx={{ fontWeight: 'bold', marginBottom: '10rem' }} gutterBottom>Featured Companies</Typography>
                 {loading && (
                     <Box className="progress-box">
                         <CircularProgress/>

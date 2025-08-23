@@ -14,11 +14,13 @@ const CompanyTable = (companiesWrapper) => {
     return (
         <>
             <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <Table sx={{ minWidth: 850 }} aria-label="simple table">
                     <TableHead>
-                        <TableRow sx={{ fontSize: 'large' }} aria-label="simple table">
-                            <TableCell>Company</TableCell>
-                            <TableCell>Sector</TableCell>
+                        <TableRow sx={{  }} aria-label="simple table">
+                            <TableCell sx={{textAlign: 'center', fontSize: 'h6.fontSize', fontWeight: 'bold'}}>
+                                Company</TableCell>
+                            <TableCell sx={{textAlign: 'center', fontSize: 'h6.fontSize', fontWeight: 'bold'}}>
+                                Sector</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -27,10 +29,10 @@ const CompanyTable = (companiesWrapper) => {
                                 key={row.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
-                                <TableCell component="th" scope="row">
+                                <TableCell sx={{textAlign: 'center'}}>
                                     {row.name}
                                 </TableCell>
-                                <TableCell>{row.sector}</TableCell>
+                                <TableCell sx={{textAlign: 'center'}} >{row.sector}</TableCell>
                             </TableRow>
                         ))}
                     </TableBody>
