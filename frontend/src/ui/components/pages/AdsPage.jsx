@@ -10,7 +10,7 @@ const AdsPage = () => {
     const {ads, loading} = UseAds();
     return (
         <>
-            <Box>
+            <Box sx={{ flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                 <Typography variant="h1" sx={{ fontWeight: 'bold', marginBottom: '10rem' }} gutterBottom>Job Ads</Typography>
                 {loading && (
                     <Box className="progress-box">
