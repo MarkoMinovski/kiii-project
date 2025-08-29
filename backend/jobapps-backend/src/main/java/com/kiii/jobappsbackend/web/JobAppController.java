@@ -43,10 +43,10 @@ public class JobAppController {
         return ResponseEntity.badRequest().build();
     }
 
-    @PostMapping("/update")
-    public ResponseEntity<UpdateJobAppDTO> update(@RequestBody UpdateJobAppDTO params) {
+    @PostMapping("/update/{id}")
+    public ResponseEntity<UpdateJobAppDTO> update(@RequestBody CreateJobAppDTO params, @PathVariable Long id) {
         Optional<JobApp> updateResult = this.jobAppService.update(
-                params.id(), params.applicantName(), params.description(), params.jobAdId());
+                id, params.applicantName(), params.description(), params.jobAdId());
 
         if (updateResult.isPresent()) {
             return ResponseEntity.ok(UpdateJobAppDTO.from(updateResult.get()));

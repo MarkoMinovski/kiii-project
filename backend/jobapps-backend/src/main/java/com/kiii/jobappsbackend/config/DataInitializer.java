@@ -10,10 +10,12 @@ import org.springframework.stereotype.Component;
 public class DataInitializer {
     private final CompanyService companyService;
     private final JobAdService jobAdService;
+    private final JobAppService jobAppService;
 
-    public DataInitializer(CompanyService companyService, JobAdService jobAdService) {
+    public DataInitializer(CompanyService companyService, JobAdService jobAdService, JobAppService jobAppService) {
         this.companyService = companyService;
         this.jobAdService = jobAdService;
+        this.jobAppService = jobAppService;
     }
 
     @PostConstruct
@@ -28,6 +30,12 @@ public class DataInitializer {
             this.jobAdService.create("Cashier", 1L);
             this.jobAdService.create("Software Engineer", 2L);
             this.jobAdService.create("Mechanical Engineer", 3L);
+        }
+
+        if (this.jobAppService.getAll().isEmpty()) {
+            this.jobAppService.create("John Doe", "Lorem Ipsum Dolorem Sit", 1L);
+            this.jobAppService.create("Jane Doe", "Lorem Ipsum Dolorem Sit", 1L);
+            this.jobAppService.create("Steve Doe", "Lorem Ipsum Dolorem Sit", 2L);
         }
 
     }
