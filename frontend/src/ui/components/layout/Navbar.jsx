@@ -33,6 +33,12 @@ const Navbar = () => {
                         </ReactRouterLink>
                     </Button>
 
+                    <Button>
+                        <ReactRouterLink to="/apps" style={{ textDecoration: 'none', color: "#FFFFFF" }}>
+                            Job Apps
+                        </ReactRouterLink>
+                    </Button>
+
                 </Toolbar>
             </AppBar>
         </Box>

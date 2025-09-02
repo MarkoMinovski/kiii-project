@@ -2,7 +2,7 @@ import React from 'react';
 import AdCard from "../jobAdComponents/AdCard.jsx"
 import {Grid} from "@mui/material";
 
-const AdGrid = ({ads}) => {
+const AdGrid = ({ads, onEdit, onDelete}) => {
     return (
         <Grid container spacing={{xs: 2, md: 3}} sx={{ justifyContent: 'space-between' }}>
             {ads.map((ad) => (

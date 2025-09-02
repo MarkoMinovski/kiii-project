@@ -14,7 +14,7 @@ import {
 const initialFormData = {
     applicantName: "",
     description: "",
-    jobAd: null
+    jobAdId: null
 };
 
 const AddJobAppDialog = ({open, onClose, onAdd}) => {
@@ -60,7 +60,7 @@ const AddJobAppDialog = ({open, onClose, onAdd}) => {
                 <FormControl fullWidth margin="dense">
                     <InputLabel>Job Ad</InputLabel>
                     <Select
-                        name="jobAd"
+                        name="jobAdId"
                         value={formData.jobAd}
                         onChange={handleChange}
                         label="Job Advertisement"

@@ -19,7 +19,7 @@ const EditJobAppDialog = ({open, onClose, jobApp, onEdit}) => {
     const [formData, setFormData] = useState({
         applicantName: jobApp.applicantName,
         description: jobApp.description,
-        jobAd: jobApp.jobAd
+        jobAdId: jobApp.jobAdId
     })
     const {ads} = UseAds();
 
@@ -62,8 +62,8 @@ const EditJobAppDialog = ({open, onClose, jobApp, onEdit}) => {
                 <FormControl fullWidth margin="dense">
                     <InputLabel>Job Ad</InputLabel>
                     <Select
-                        name="jobAd"
-                        value={formData.jobAd}
+                        name="jobAdId"
+                        value={formData.jobAdId}
                         onChange={handleChange}
                         label="Job Advertisement"
                         variant="outlined">
