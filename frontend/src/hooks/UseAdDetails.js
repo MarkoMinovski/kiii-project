@@ -10,7 +10,7 @@ const UseAdDetails = (id) => {
     })
 
     useEffect(() => {
-        AdsRepository.find(id).then((adsReposResp) => {
+        AdsRepository.findOne(id).then((adsReposResp) => {
             setState(prevState => ({...prevState, position: adsReposResp.data.position}));
 
 
@@ -23,7 +23,7 @@ const UseAdDetails = (id) => {
                 setState(prevState => ({...prevState, applications: adsResp.data}));
             })
 
-            
+
         })
     }, [id])
 

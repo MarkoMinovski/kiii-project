@@ -1,6 +1,5 @@
 import {useCallback, useEffect, useState} from "react";
 import AppsRepository from "../repositories/AppsRepository.js"
-import appsRepository from "../repositories/AppsRepository.js";
 
 const initialState = {
     jobApps: [],
@@ -37,7 +36,7 @@ const UseJobApps = () => {
     }, [fetchApps]);
 
     const onDelete = useCallback((id) => {
-        appsRepository.delete(id).then(() => {
+        AppsRepository.delete(id).then(() => {
             console.log("Deleted successfully")
             fetchApps();
         })

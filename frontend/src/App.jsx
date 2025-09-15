@@ -7,6 +7,7 @@ import CompanyPage from "./ui/components/pages/CompanyPage.jsx";
 import AdsPage from "./ui/components/pages/AdsPage.jsx";
 import AppGrid from "./ui/components/jobAppComponents/AppGrid.jsx";
 import JobAppsPage from "./ui/components/pages/JobAppsPage.jsx";
+import JobAppDetails from "./ui/components/jobAppComponents/JobAppDetails.jsx";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/companies" element={<CompanyPage/>}></Route>
                     <Route path="/ads" element={<AdsPage/>}></Route>
                     <Route path="/apps" element={<JobAppsPage/>}></Route>
+                    <Route path="/apps/:id" element={<JobAppDetails/>}></Route>
                 </Route>
             </Routes>
 

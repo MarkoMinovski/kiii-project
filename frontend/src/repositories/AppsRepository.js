@@ -15,11 +15,11 @@ const AppsRepository = {
     },
 
     update: async (id, data) => {
-      return await AxiosInstance.post(`/job-apps/${id}`, data);
+      return await AxiosInstance.post(`/job-apps/update/${id}`, data);
     },
 
     delete: async (id) => {
-        return await AxiosInstance.delete(`/job-apps/${id}`);
+        return await AxiosInstance.delete(`/job-apps/delete/${id}`);
     }
 }
 

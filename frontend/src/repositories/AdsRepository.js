@@ -6,7 +6,7 @@ const AdsRepository = {
         return await AxiosInstance.get('/ads');
     },
 
-    find: async (id) => {
+    findOne: async (id) => {
         return await AxiosInstance.get(`/ads/${id}`);
     },
 
