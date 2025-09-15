@@ -16,10 +16,12 @@ import {useState} from "react";
 
 const EditJobAppDialog = ({open, onClose, jobApp, onEdit}) => {
 
+    console.log(jobApp);
+
     const [formData, setFormData] = useState({
         applicantName: jobApp.applicantName,
         description: jobApp.description,
-        jobAdId: jobApp.jobAdId
+        jobAdId: jobApp.jobAd.id
     })
     const {ads} = UseAds();
 
@@ -31,6 +33,7 @@ const EditJobAppDialog = ({open, onClose, jobApp, onEdit}) => {
 
     const handleSubmit = () => {
         console.log(formData);
+        console.log(jobApp.id);
         onEdit(jobApp.id, formData);
         setFormData(formData);
         onClose();
@@ -38,7 +41,7 @@ const EditJobAppDialog = ({open, onClose, jobApp, onEdit}) => {
 
     return (
         <Dialog open={open} onClose={onClose}>
-            <DialogTitle>Add Job App</DialogTitle>
+            <DialogTitle>Edit Job App</DialogTitle>
             <DialogContent>
                 <TextField
                     margin="dense"
@@ -75,7 +78,7 @@ const EditJobAppDialog = ({open, onClose, jobApp, onEdit}) => {
             </DialogContent>
             <DialogActions>
                 <Button onClick={onClose}>Cancel</Button>
-                <Button onClick={handleSubmit} variant="contained" color="primary">Add</Button>
+                <Button onClick={handleSubmit} variant="contained" color="primary">Save</Button>
             </DialogActions>
         </Dialog>
     );
