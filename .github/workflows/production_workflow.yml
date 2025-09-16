@@ -51,9 +51,9 @@ jobs:
       # 7. Restart Frontend Container Instance
       - name: Restart Frontend Container
         run: |
-          az container restart --name jobapps-frontend --resource-group devops-group
+          az webapp restart --name jobapps-frontend --resource-group devops-group
 
       # 8. Restart Backend Container Instance
       - name: Restart Backend Container
         run: |
-          az container restart --name jobapps-backend --resource-group devops-group
+          az webapp restart --name jobapps-backend --resource-group devops-group
