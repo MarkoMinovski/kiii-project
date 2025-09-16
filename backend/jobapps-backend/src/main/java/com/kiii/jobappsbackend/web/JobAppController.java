@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://jobapps-frontend.azurewebsites.net")
 @RequestMapping("/api/job-apps")
 public class JobAppController {
 

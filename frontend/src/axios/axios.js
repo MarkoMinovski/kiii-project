@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const AxiosInstance = axios.create({
-    baseURL: "http://localhost:8080/api",
+    baseURL: "https://jobapps-backend.azurewebsites.net/api",
     headers: {
         "Content-Type": "application/json",
     },
