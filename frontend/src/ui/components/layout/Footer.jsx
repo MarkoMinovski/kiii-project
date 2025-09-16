@@ -22,7 +22,7 @@ const Footer = () => {
                     <Box sx={{ flexGrow: 1 }} />
 
                     <Typography variant="h6">
-                        Made with React + Spring 🙂
+                        Made with React + Spring 🙂 (and Azure)
                     </Typography>
                 </Toolbar>
             </AppBar>
