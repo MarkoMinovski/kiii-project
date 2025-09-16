@@ -1,0 +1,59 @@
+name: Deploy frontend and backend to production
+
+on:
+  push:
+    branches:
+      - prod
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      
+      - name: Build & Push Frontend Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./frontend  
+          file: ./frontend/Dockerfile
+          push: true
+          tags: markom565/kiii-proekt-frontend:prod
+
+      
+      - name: Build & Push Backend Image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./backend/jobapps-backend  
+          file: ./backend/jobapps-backend/Dockerfile
+          push: true
+          tags: markom565/kiii-proekt-backend:prod
+
+      # 6. Log in to Azure CLI
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # 7. Restart Frontend Container Instance
+      - name: Restart Frontend Container
+        run: |
+          az container restart --name jobapps-frontend --resource-group devops-group
+
+      # 8. Restart Backend Container Instance
+      - name: Restart Backend Container
+        run: |
+          az container restart --name jobapps-backend --resource-group devops-group
