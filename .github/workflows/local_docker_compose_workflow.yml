@@ -1,0 +1,38 @@
+name: Build & Push Local Docker Images
+
+on:
+  push:
+    branches:
+      - local_docker_compose
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      
+      - name: Build & push frontend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./frontend
+          push: true
+          tags: markom565/kiii-proekt-frontend:local
+
+      
+      - name: Build & push backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./backend/jobapps-backend
+          push: true
+          tags: markom565/kiii-proekt-backend:local
