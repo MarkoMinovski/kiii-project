@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://frontendk8s.local")
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/company")
 public class CompanyController {
 

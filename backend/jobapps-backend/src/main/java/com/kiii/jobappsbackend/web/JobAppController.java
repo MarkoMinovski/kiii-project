@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "http://frontendk8s.local")
+@CrossOrigin(origins = "*")
 @RequestMapping("/api/job-apps")
 public class JobAppController {
 
