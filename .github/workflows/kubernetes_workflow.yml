@@ -1,9 +1,9 @@
-name: Build & Push Local Docker Images
+name: Build & Push Local Docker Images On Kubernetes Branch
 
 on:
   push:
     branches:
-      - local_docker_compose
+      - kubernetes
 
 jobs:
   build-and-push:
@@ -27,7 +27,7 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: markom565/kiii-proekt-frontend:local
+          tags: markom565/kiii-proekt-frontend:kubernetes
 
       
       - name: Build & push backend image
@@ -35,4 +35,4 @@ jobs:
         with:
           context: ./backend/jobapps-backend
           push: true
-          tags: markom565/kiii-proekt-backend:local
+          tags: markom565/kiii-proekt-backend:kubernetes

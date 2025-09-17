@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: markom565/kiii-proekt-frontend:latest
+        image: markom565/kiii-proekt-frontend:kubernetes
         imagePullPolicy: Always
         ports:
         - containerPort: 3000

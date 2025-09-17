@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: markom565/kiii-proekt-backend:latest
+        image: markom565/kiii-proekt-backend:kubernetes
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
