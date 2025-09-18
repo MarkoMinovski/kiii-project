@@ -3,7 +3,7 @@ name: Build & Push Local Docker Images
 on:
   push:
     branches:
-      - local_docker_compose
+      - master
 
 jobs:
   build-and-push:
