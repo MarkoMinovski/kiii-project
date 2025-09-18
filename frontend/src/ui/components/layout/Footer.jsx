@@ -12,8 +12,8 @@ import Typography from "@mui/material/Typography";
 
 const Footer = () => {
     return (
-        <Box sx={{ flexGrow: 1 }} color="secondary" >
-            <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }}>
+        <Box sx={{ flexGrow: 1 }} color="secondary">
+            <AppBar position="fixed" sx={{ top: 'auto', bottom: 0 }} color="primary">
                 <Toolbar>
                     <Typography variant="h6">
                         KIII - JobApps
