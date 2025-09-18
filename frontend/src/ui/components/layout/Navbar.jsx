@@ -10,7 +10,7 @@ import {Link as ReactRouterLink} from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <Box sx={{ flexGrow: 1, backgroundColor: "#2C2F5B" }}>
+        <Box sx={{ flexGrow: 1, backgroundColor: "#a82297" }}>
             <AppBar>
                 <Toolbar>
 
