@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import UseJobApps from "../../../hooks/UseJobApps.js";
 import AddJobAppDialog from "../jobAppComponents/AddJobAppDialog.jsx";
 import AppGrid from "../jobAppComponents/AppGrid.jsx";
+import Typography from "@mui/material/Typography";
 
 
 
@@ -16,6 +17,7 @@ const JobAppsPage = () => {
     return (
         <>
             <Box className="products-box">
+                <Typography variant="h3" sx={{ fontWeight: 'bold', marginBottom: '10rem' }} gutterBottom>Applications</Typography>
                 {loading && (
                     <Box className="progress-box">
                         <CircularProgress/>
