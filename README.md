@@ -14,7 +14,7 @@ This branch (master) features the local docker-compose version, which functions 
 
 ### Installing
 
-* git clone https://github.com/MarkoMinovski/kiii-project.git
+```git clone https://github.com/MarkoMinovski/kiii-project.git```
 
 ### Executing program
 
@@ -24,3 +24,5 @@ This branch (master) features the local docker-compose version, which functions 
 cd installation-root-directory
 docker compose up --build
 ```
+
+* You can then access JobApps at http://localhost:3000
